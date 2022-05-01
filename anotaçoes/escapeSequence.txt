@@ -1,0 +1,16 @@
+Como o nome denota, a sequência de fuga denota o cenário em que um personagem sofre uma mudança de sua forma normal e denota algo diferente do seu significado habitual. Geralmente, uma sequência de fuga começa com uma barra invertida '\' seguida por um personagem ou caracteres. O compilador c interpreta qualquer caractere seguido por um '\' como uma sequência de fuga. As sequências de fuga são usadas para formatar o texto de saída e geralmente não são exibidas na tela. Cada sequência de fuga tem sua própria função predefinida.
+
+ \n        --  Nova linha, quebra a linha e cira outra
+ \t         --  Tab horizontal, dá um espaço apartir da esquerda
+ \b        --  backsapce - a frase após o \b será apagada 
+ \r         --  Corrigir retorno, retorna o curso para o inicio da linha atual
+ \a        --  emite um som
+ \'          -- imprimir aspas simples dentro de aspas duplas.
+ \"         --  imprimir aspas duplas dentro de aspas duplas, evitando o conflito de sintax
+ \?        --  Posicionar cursor ao inicio da linha
+ \\         --  Imprimir um barra, evitando o conflito de sintax   
+ \f         --  
+ \v        --  
+ \0        --  finaliza o printf(), todo printf() tem isso mesmo que nbão seja mostrado
+ \nnn   -- 
+ \xhh    -- 

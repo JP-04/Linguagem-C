@@ -1,0 +1,4 @@
+//----------------------------- bibliotecas
+#include <stdio.h>  : 
+#include <stdlib.h> : arquivo de cabeçalho , controlar processor, alocar memória etec.... 
+#include <ctype.h> : biblioteca criada pelo padão ASCII, dedicada para manipulação de caractere do C

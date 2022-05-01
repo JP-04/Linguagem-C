@@ -1,0 +1,9 @@
+//----------------------------- Imprimir valores Printf():
+- para imprimir somente UM sinal de porcentagem -- %%
+- para imprimir número com noração cientifica -- e% ou E%
+- módulo de um número --     %u
+- endereço na memória --     %p
+- integer   -- %i ou %d
+- float / double    -- %f
+- char --     %c
+- string --  %s

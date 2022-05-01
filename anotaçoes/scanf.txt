@@ -1,0 +1,14 @@
+ //-----------------------------  Códigos de formatação para scanf( ):
+Inteiro decimal, hexadecimal ou octal. --   %i
+Ponto flutuante longo (double). -               %lf
+-%g  Usa %e ou %f, o que for menor.
+Ponto flutuante em decimal. --   %f
+Inteiro decimal sem sinal. --         %u
+Inteiro decimal com sinal. --        %d
+Inteiro decimal longo. --               %ld
+Inteiro hexadecimal.-   %x
+Notação científica. -     %e
+String de caracteres-   %s
+Caractere simples. --    %c 
+Double longo-   %Lf
+Inteira octal. --   %o 
