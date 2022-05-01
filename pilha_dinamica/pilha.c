@@ -2,57 +2,70 @@
 #include <stdlib.h>
 #include <locale.h>
 
-#define N 2
+ typedef struct nodeItem{                        //item do nó
+    int info;
+    struct nodeItem *next;
+}node;
  typedef struct {
-    int top;         // verificr topo da pllha 
-    int data[N];     //dados da pilha
+    node *top;                                   // verificr topo da pllha 
  }stack;
-
+ 
+ node *  newNode     (int info);                 //Alocar     um   novo  nó
  stack*  newStack    (        );
  void    push        (stack * s, int value);     // criar     novo item  da   pilha
  int     pop         (stack * s);                // retirar   item do    topo
  int     top         (stack * s);                // apontar   para item  do   topo
  int     isStackEmpty(stack * s);                // verificar se a pilha esta vazia
- int     isStackFull (stack * s);                // veriricar se a pilha esta cheia 
 
 //------------------------------------------------------------
  int main(){
     stack *p;
-    p =   newStack();
-    push(p,15);
-    push(p,55);
-    printf("Top: %d\n", pop(p));
-    
+    p = newStack();
     if (isStackEmpty(p)){
         printf("A pilha esta vazia\n");
     }
-    if (!isStackFull(p)){
-        printf("A pilha nao esta cheia\n");
+    push(p,80);
+    push(p,70);
+    printf("item topo atual:      %d\n   ", top(p)); //verificar item do topo
+    printf("removeu item do topo: %d\n   ", pop(p)); //remover item do topo    
+    printf("Novo item do topo:    %d\n   ", top(p)); //verificar item do topo                     
+    
+    if (isStackEmpty(p)){
+        printf("A pilha esta vazia\n");
     }
  }
 //------------------------------------------------------------
  stack *newStack(){
      stack  *p = (stack*)malloc(sizeof(stack));
-     p->top =0;
+     p->top = NULL;
      return  p;
  }
 //------------------------------------------------------------
+node*  newNode(int info){
+    node *n = (node *)malloc(sizeof(node));
+    n->info = info;
+    n->next = NULL;
+    return n;
+}
+//------------------------------------------------------------
  void push(stack *s, int value){
-     if(isStackFull(s)){
-         printf("Estouro de pilha\n");
-         return;
-     }
-     s->data[s->top] = value;
-     s->top++;
+     node *n = newNode(value);
+     n->next = s->top;
+     s->top = n;
  }
 //------------------------------------------------------------
  int pop(stack *s){
+     int aux;
+     node *n;
      if(isStackEmpty(s)){
         printf("A pilha esta vazia\n");
         return -1;
      }
-     s->top = s->top - 1;
-     return s->data[s->top];
+     n      = s->top;
+     aux    = n->info;
+     s->top = n->next;
+     free(n);
+     return aux;
  }
 //------------------------------------------------------------
  int top(stack  *s){
@@ -60,13 +73,10 @@
         printf("A pilha esta vazia\n");
         return -1;
      }
-     return s->data[s->top - 1 ];
+     return s->top->info;
  }
-//------------------------------------------------------------
- int isStackFull(stack *s){
-    return s->top == N;
-}
 //------------------------------------------------------------
  int isStackEmpty(stack *s){
-     return s->top ==0;
+     return s->top == NULL;
  }
+//------------------------------------------------------------

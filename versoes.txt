@@ -1,0 +1,3 @@
+versão 001 = Iniciar Repotitório 
+versão 002 = Pilha Dinamica (Em andamanto)
+versão 003 = Pilha Dinamica (Finalizada)
