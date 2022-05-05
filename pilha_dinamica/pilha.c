@@ -21,17 +21,16 @@
  int main(){
     stack *p;
     p = newStack();
-    if (isStackEmpty(p)){
-        printf("A pilha esta vazia\n");
-    }
+    
     push(p,80);
-    push(p,70);
-    printf("item topo atual:      %d\n   ", top(p)); //verificar item do topo
-    printf("removeu item do topo: %d\n   ", pop(p)); //remover item do topo    
-    printf("Novo item do topo:    %d\n   ", top(p)); //verificar item do topo                     
+    push(p,70); 
     
     if (isStackEmpty(p)){
         printf("A pilha esta vazia\n");
+    }else{
+        printf("-------item topo atual:      %d\n   ", top(p)); //verificar item do topo
+        printf("-------removeu item do topo: %d\n   ", pop(p)); //remover item do topo    
+        printf("-------Novo item do topo:    %d\n   ", top(p)); //verificar item do topo 
     }
  }
 //------------------------------------------------------------
