@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "somar_arrays": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

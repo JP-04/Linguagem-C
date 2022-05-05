@@ -1,4 +1,5 @@
 versão 001 = Iniciar Repotitório 
-versão 002 = Pilha Dinamica (Em andamanto)
-versão 003 = Pilha Dinamica (Finalizada)
-versão 004 = Pilha Dinamica (Matrizes e Arrays)
+versão 002 = Pilha Dinamica    (Em andamanto)
+versão 003 = Pilha Dinamica    (Finalizada)
+versão 004 = Pilha Dinamica    (Matrizes e Arrays)
+versão 005 = Listas Encadeadas
