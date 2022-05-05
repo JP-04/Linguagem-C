@@ -3,3 +3,4 @@ versão 002 = Pilha Dinamica    (Em andamanto)
 versão 003 = Pilha Dinamica    (Finalizada)
 versão 004 = Pilha Dinamica    (Matrizes e Arrays)
 versão 005 = Listas Encadeadas
+versão 006 = Listas Encadeadas (função "Remover")
