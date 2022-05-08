@@ -6,12 +6,12 @@
 //------------------------------ valor armazenado e ponteiro 
 typedef struct No{
     int        valor_lista;
-    struct No *proximo_item
+    struct No *proximo_item;
 }No;
 //------------------------------ tamanho da lista e item do topo
 typedef struct{
     No  *inicio;
-    int tamanho_lista
+    int tamanho_lista;
 }Lista;
 //------------------------------ inserir item no topo da lista
 void inserir_topo(Lista *lista, int valor_lista){
@@ -57,8 +57,8 @@ void remover_no_lista(Lista *lista, int valor_lista){
         }
         if (inicio != NULL && inicio->proximo_item != NULL)
         {
-            remover_no           = inicio      -> proximo_item; // remover no
-            inicio->proximo_item = remover_no  -> proximo_item; // remover item
+            remover_no           = inicio      -> proximo_item; //remover no
+            inicio->proximo_item = remover_no  -> proximo_item; //remover item
         }
     }
     if (remover_no){
@@ -89,7 +89,7 @@ int main(){
 
     do{
         printf("\n------------- menu ------------- \n");
-        printf(" 1 - Inserir no inicio da lista \n 2 - Inserir no fim da lista \n 3 - Mostrar lista  \n 4 - Remover item da lista \n 5 - Sair do programa\n\n ---- opcao :");
+        printf(" 1 - Inserir no topo da lista \n 2 - Inserir no fim da lista \n 3 - Mostrar lista  \n 4 - Remover item da lista \n 5 - Sair do programa\n\n ---- opcao :");
         scanf("%d", &opcao);
 
         switch (opcao){
